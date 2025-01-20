@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% include 'parts/sidebar.html' %}
+    <div class="wrapper d-flex flex-column min-vh-100 bg-light">
+      {% include 'parts/header.html' %}
+      <div class="body flex-grow-1 px-3">
+        <div class="container-lg">
+          {% block content %} {% endblock %}
+        </div>
+      </div>
+      {% include 'parts/footer.html' %}
+    </div>
+{% endblock %}

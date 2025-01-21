@@ -1,39 +1,42 @@
 {% extends 'base.html' %}
 {% block body %}
+{% load static %}
 <div class="bg-light min-vh-100 d-flex flex-row align-items-center">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="card mb-4 mx-4">
           <div class="card-body p-4">
-            <h1>Register</h1>
-            <p class="text-medium-emphasis">Create your account</p>
+            <h1 class="text-center text-success mb-5">ثبت نام در سایت</h1>
+            {% comment %} <p class="text-medium-emphasis">ساخت اکانت کاربری جدید</p> {% endcomment %}
             <div class="input-group mb-3"><span class="input-group-text">
                 <svg class="icon">
-                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
+                  <use xlink:href="{% static 'vendors/@coreui/icons/svg/free.svg#cil-user' %}"></use>
 
                 </svg></span>
-              <input class="form-control" type="text" placeholder="Username">
+              <input class="form-control" type="text" placeholder="نام و نام خانوادگی">
             </div>
             <div class="input-group mb-3"><span class="input-group-text">
                 <svg class="icon">
                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
                 </svg></span>
-              <input class="form-control" type="text" placeholder="Email">
+              <input class="form-control" type="text" placeholder="ایمیل" dir='ltr'>
             </div>
             <div class="input-group mb-3"><span class="input-group-text">
                 <svg class="icon">
                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
                 </svg></span>
-              <input class="form-control" type="password" placeholder="Password">
+              <input class="form-control" type="password" placeholder="گذرواژه" dir='ltr'>
             </div>
             <div class="input-group mb-4"><span class="input-group-text">
                 <svg class="icon">
                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
                 </svg></span>
-              <input class="form-control" type="password" placeholder="Repeat password">
+              <input class="form-control" type="password" placeholder="تکرار گذرواژه" dir="ltr">
             </div>
-            <button class="btn btn-block btn-success" type="button">Create Account</button>
+            <div class="text-center">
+              <button class="btn btn-block btn-success" type="button">اعمال تغییرات</button>
+            </div>
           </div>
         </div>
       </div>
